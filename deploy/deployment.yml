@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cicd-demo-app-deployment
+  labels:
+    app: cicd-demo-app
+spec:
+  selector:
+    matchLabels:
+      app: cicd-demo-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: cicd-demo-app
+    spec:
+      containers:
+        - name: cicd-demo-app
+          image: vipulfadtedev/cicd-demo-app:latest
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              memory: 256Mi
+              cpu: "250m"
+            requests:
+              memory: 128Mi
+              cpu: "80m"

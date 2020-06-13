@@ -12,15 +12,16 @@ pipeline {
             }
         }
         stage('Docker Build') {
-                steps {
-                    sh 'docker build -t vipulfadtedev/cicd-demo-app .'
-                    sh 'docker push vipulfadtedev/cicd-demo-app:latest'
-					}
-            }
-        stage('Deploy') {
-                steps {
-                    sh 'cd deploy'
-                    sh 'kubectl apply -f .'
-					}
+            steps {
+                sh 'docker build -t vipulfadtedev/cicd-demo-app .'
+                sh 'docker push vipulfadtedev/cicd-demo-app:latest'
 			}
+        }
+        stage('Deploy') {
+            steps {
+                sh 'cd deploy'
+                sh 'kubectl apply -f .'
+			}
+		}
     }
+}

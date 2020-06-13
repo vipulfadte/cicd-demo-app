@@ -8,7 +8,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'whoami'
                 sh 'ls -lart'
                 sh 'ls -lart ~'
                 sh 'ls -lart /'

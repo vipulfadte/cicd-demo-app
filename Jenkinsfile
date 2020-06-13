@@ -21,7 +21,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'cd deploy'
-                sh 'kubectl apply -f .'
+                sh 'kubectl apply -f deployment.yml'
+                sh 'kubectl apply -f service.yml'
 			}
 		}
     }

@@ -1,10 +1,9 @@
 pipeline {
-     /*agent {
+     agent {
                 docker {
-                    image 'vipulfadtedev/arm64v8-jenkins-builder-openjdk8-mvn-docker-kubectl:1.0.0'
-                    args '-v /docker_volumes/.m2:/root/.m2 -v /var/run/docker.sock:/var/run/docker.sock'
-                }
-            }*/
+                    image 'arm64v8/openjdk:8u171-jdk-alpine3.8'
+                    }
+     }
     stages {
         stage('Build') {
             steps {

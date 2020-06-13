@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'ls -lart'
-                sh 'ls -lart ~'
+                sh 'ls -lart /root'
                 sh 'ls -lart /'
                 sh 'mvn clean install'
             }

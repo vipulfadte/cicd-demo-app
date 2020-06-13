@@ -1,12 +1,14 @@
 pipeline {
      agent {
                 docker {
-                    image 'arm64v8/openjdk:8u171-jdk-alpine3.8'
-                    }
+                    image 'vipulfadtedev/arm64v8-jenkins-builder-openjdk8-mvn-docker-kubectl:1.0.0'
+                    args '-v /docker_volumes/.m2:/root/.m2 -v /var/run/docker.sock:/var/run/docker.sock'
+                }
      }
     stages {
         stage('Build') {
             steps {
+                sh 'echo $HOME'
                 sh 'mvn clean install'
             }
         }

@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'vipulfadtedev/arm64v8-jenkins-builder-openjdk8-mvn-docker-kubectl'
+            image 'vipulfadtedev/arm64v8-jenkins-builder-openjdk8-mvn-docker-kubectl:1.0.0'
             args '-v /docker_volumes/mvn:/root/mvn -v /var/run/docker.sock:/var/run/docker.sock'
         }
     }

@@ -13,7 +13,6 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                sh 'docker login'
                 sh 'docker build -t vipulfadtedev/cicd-demo-app .'
                 sh 'docker push vipulfadtedev/cicd-demo-app:latest'
 			}

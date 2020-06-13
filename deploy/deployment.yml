@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: area51
   name: cicd-demo-app-deployment
   labels:
     app: cicd-demo-app
@@ -8,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: cicd-demo-app
-  replicas: 2
+  replicas: 3
   template:
     metadata:
       labels:

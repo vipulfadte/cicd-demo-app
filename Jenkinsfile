@@ -1,5 +1,4 @@
 pipeline {
-    agent none
      /*agent {
                 docker {
                     image 'vipulfadtedev/arm64v8-jenkins-builder-openjdk8-mvn-docker-kubectl:1.0.0'

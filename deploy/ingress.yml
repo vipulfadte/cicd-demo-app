@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: area51-ingress
+  namespace: area51
+  annotations:
+    INGRESS.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: piclm
+      http:
+        paths:
+          - path: /greeting
+            backend:
+              serviceName: cicd-demo-app-service
+              servicePort: 8080

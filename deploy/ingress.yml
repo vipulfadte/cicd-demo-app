@@ -10,5 +10,5 @@ spec:
         paths:
           - path: /greeting
             backend:
-              serviceName: cicd-demo-app-service
+              serviceName: cicd-demo-app-svc
               servicePort: 8080

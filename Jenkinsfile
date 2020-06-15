@@ -25,6 +25,7 @@ pipeline {
                 sh 'ls -lart deploy'
                 sh 'kubectl apply -f deploy/deployment.yml'
                 sh 'kubectl apply -f deploy/service.yml'
+                sh 'kubectl apply -f deploy/ingress.yml'
 			}
 		}
     }

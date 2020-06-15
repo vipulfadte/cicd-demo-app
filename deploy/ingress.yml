@@ -3,11 +3,9 @@ kind: Ingress
 metadata:
   name: area51-ingress
   namespace: area51
-  annotations:
-    INGRESS.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: piclm
+    - host: piclm.vortex
       http:
         paths:
           - path: /greeting

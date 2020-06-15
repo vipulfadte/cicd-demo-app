@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                sh 'mvn clean install -Dmaven.repo.local=/.m2/repository'
             }
         }
         stage('Docker Build') {

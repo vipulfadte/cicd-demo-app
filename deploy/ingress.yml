@@ -5,7 +5,7 @@ metadata:
   namespace: area51
 spec:
   rules:
-    - host: piclm.vortex
+    - host: piclm.vortex.net
       http:
         paths:
           - path: /greeting
